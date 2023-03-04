@@ -202,8 +202,8 @@ export default {
 }
 
 /* .header .icons .account:hover .drop-down-select {
-      display: block;
-  } */
+    display: block;
+} */
 
 .header .icons .account:hover .drop-down-select a {
   background-color: #f7f7f7;

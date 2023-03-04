@@ -1,5 +1,3 @@
-import router from '@/router'; import { handleError } from 'vue';
-
 <template>
   <div class="login-container">
     <div class="login-form-container">
@@ -18,7 +16,7 @@ import router from '@/router'; import { handleError } from 'vue';
             id="uEmail"
             name="uEmail"
             class="form-control"
-            placeholder="Enter your email"
+            placeholder="enter your email"
             v-model="loginObj.email"
           />
         </div>
@@ -29,18 +27,18 @@ import router from '@/router'; import { handleError } from 'vue';
             id="uPass"
             name="uPass"
             class="form-control"
-            placeholder="Enter your password"
+            placeholder="enter your password"
             v-model="loginObj.pass"
           />
         </div>
 
         <div class="form-group">
-          <input type="submit" value="Login now" class="btn" />
+          <input type="submit" value="login now" class="btn" />
           <p>
-            Don't have an account ?
+            don't have an account?
             <router-link @click="scrollToTop()" to="/register"
-              >Create one</router-link
-            >
+              >create one
+            </router-link>
           </p>
         </div>
       </form>
@@ -49,7 +47,6 @@ import router from '@/router'; import { handleError } from 'vue';
 </template>
 
 <script>
-import { def } from "@vue/shared";
 import axios from "axios";
 import { mapMutations } from "vuex";
 export default {
@@ -91,13 +88,14 @@ export default {
       if (!this.loginObj.pass) {
         this.errors.push("Password is required");
       }
+
       if (!this.errors.length == 0) {
         e.preventDefault();
       } else {
         e.preventDefault();
         await this.getMatchUser(this.loginObj.email);
         if (!this.matchUser) {
-          this.errors.push("Incorrent email or password!");
+          this.errors.push("Incorrect email or password!");
         } else {
           if (this.matchUser.user_password === this.loginObj.pass) {
             this.matchUser.user_password = "";
@@ -174,6 +172,7 @@ export default {
 .login-container .login-form-container form p a {
   color: #27ae60;
 }
+
 .login-container .login-form-container form p a:hover {
   color: #130f40;
   text-decoration: underline;
