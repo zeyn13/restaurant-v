@@ -1,10 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <router-view />
+  <NavBar />
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
+
 export default {
   name: "App",
+  components: {
+    NavBar,
+  },
 };
 </script>
 
@@ -16,5 +22,27 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.logo {
+  width: 180px;
+}
+.register input {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  display: block;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1pz solid skyblue;
+}
+.register button {
+  width: 320px;
+  height: 40px;
+  border: 1px solid skyblue;
+  background: skyblue;
+  color: #fff;
+  cursor: pointer;
 }
 </style>
