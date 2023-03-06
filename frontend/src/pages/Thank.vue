@@ -57,7 +57,7 @@ const vNone = {
 .thank-container h1 {
     width: 100%;
     height: 100px;
-     margin: auto;
+    margin: auto;
     display: block;
     text-align: center;
     margin-top: 50px;
