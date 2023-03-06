@@ -68,3 +68,29 @@ CREATE TABLE user(
     user_birth VARCHAR(255),
     user_gender VARCHAR(255)
 ) ENGINE=INNODB;
+
+CREATE TABLE cart (
+  user_id INT,
+  food_id INT,
+  item_qty INT,
+  primary key (user_id, food_id)
+);
+
+
+CREATE TABLE booktable( 
+    book_id INT(11) PRIMARY KEY AUTO_INCREMENT, 
+    book_name VARCHAR(255), 
+    book_phone VARCHAR(255),
+    book_people INT,
+    book_tables INT,
+    user_id INT,
+    book_when VARCHAR(255),
+    book_note TEXT
+) ENGINE=INNODB;
+
+CREATE TABLE billdetails (
+  bill_id INT,
+  food_id INT,
+  item_qty INT,
+  primary key (bill_id, food_id)
+);
