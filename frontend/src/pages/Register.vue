@@ -124,7 +124,7 @@
         <div class="form-group">
           <input type="submit" value="join us" class="btn" />
           <p>
-            have an account?
+            Have an account?
             <router-link @click="scrollToTop()" to="/login">login</router-link>
           </p>
         </div>
@@ -259,17 +259,17 @@ export default {
       if (!this.registerObj.phone) {
         this.errorObj.phoneErr.push("Entering phone number is required");
       } else {
-        if (!this.registerObj.phone.startsWith("84")) {
-          this.errorObj.phoneErr.push("Phone numbers must start with 84");
+        if (!this.registerObj.phone.startsWith("0")) {
+          this.errorObj.phoneErr.push("Phone numbers must start with 0");
         }
 
-        if (this.registerObj.phone.length != 11) {
+        if (this.registerObj.phone.length != 9) {
           this.errorObj.phoneErr.push(
-            "Phone numbers must have exactly 11 digits"
+            "Phone numbers must have exactly 9 digits"
           );
         }
 
-        if (!/[0-9]{11}/.test(this.registerObj.phone)) {
+        if (!/[0-9]{9}/.test(this.registerObj.phone)) {
           this.errorObj.phoneErr.push("Phone numbers can only contain numbers");
         }
       }
