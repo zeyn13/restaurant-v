@@ -47,7 +47,7 @@
                     <td class="bg-light-gray">
              
                     </td> 
-                    <td class=:bg-light-gray">
+                    <td class=:"bg-light-gray">
                     
                     </td>
                </tr>
