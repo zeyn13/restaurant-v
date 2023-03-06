@@ -94,3 +94,18 @@ CREATE TABLE billdetails (
   item_qty INT,
   primary key (bill_id, food_id)
 );
+
+CREATE TABLE billstatus (
+  bill_id INT,
+  user_id INT,
+  bill_phone VARCHAR(255),
+  bill_address TEXT,
+  bill_when VARCHAR(255),
+  bill_method VARCHAR(255),
+  bill_discount INT,
+  bill_delivery INT,
+  bill_total INT,
+  bill_paid VARCHAR(255),
+  bill_status INT,
+  primary key (bill_id)
+);
